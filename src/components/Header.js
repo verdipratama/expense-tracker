@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default () => {
+export const Header = () => {
   return (
     <div>
       <h1>The Expense Tracker</h1>

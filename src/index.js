@@ -2,11 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-import Header from './components/Header';
-import Balance from './components/Balance';
-import IncomeExpenses from './components/IncomeExpenses';
-import TransactionList from './components/TransactionList';
-import AddTransaction from './components/AddTransaction';
+import { Header } from './components/Header';
+import { Balance } from './components/Balance';
+import { IncomeExpenses } from './components/IncomeExpenses';
+import { TransactionList } from './components/TransactionList';
+import { AddTransaction } from './components/AddTransaction';
 
 import * as serviceWorker from './serviceWorker';
 

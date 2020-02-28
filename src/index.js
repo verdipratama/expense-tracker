@@ -2,12 +2,24 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
+import Header from './components/Header';
+import Balance from './components/Balance';
+import IncomeExpenses from './components/IncomeExpenses';
+import TransactionList from './components/TransactionList';
+import AddTransaction from './components/AddTransaction';
+
 import * as serviceWorker from './serviceWorker';
 
 function App() {
   return (
-    <div className="App-wrapper" style={{ textAlign: 'center' }}>
-      <h1>Hello World</h1>
+    <div className="App-wrapper">
+      <Header />
+      <div className="container">
+        <Balance />
+        <IncomeExpenses />
+        <TransactionList />
+        <AddTransaction />
+      </div>
     </div>
   );
 }

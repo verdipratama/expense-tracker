@@ -8,11 +8,12 @@ import { IncomeExpenses } from './components/IncomeExpenses';
 import { TransactionList } from './components/TransactionList';
 import { AddTransaction } from './components/AddTransaction';
 
+import { GlobalProvider } from './context/GlobalState';
 import * as serviceWorker from './serviceWorker';
 
 function App() {
   return (
-    <div className="App-wrapper">
+    <GlobalProvider>
       <Header />
       <div className="container">
         <Balance />
@@ -20,7 +21,7 @@ function App() {
         <TransactionList />
         <AddTransaction />
       </div>
-    </div>
+    </GlobalProvider>
   );
 }
 

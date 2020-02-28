@@ -1,8 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+
 import * as serviceWorker from './serviceWorker';
+
+function App() {
+  return (
+    <div className="App-wrapper" style={{ textAlign: 'center' }}>
+      <h1>Hello World</h1>
+    </div>
+  );
+}
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

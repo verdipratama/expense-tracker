@@ -1,7 +1,11 @@
 {
   "name": "expense-tracker",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "server": "nodemon server"
+  },
   "repository": "git@github.com:verdipratama/expense-tracker.git",
   "author": "verdipratama <verdipratama@icloud.com>",
   "license": "MIT",
@@ -12,5 +16,8 @@
     "express": "^4.17.1",
     "mongoose": "^5.9.2",
     "morgan": "^1.9.1"
+  },
+  "devDependencies": {
+    "concurrently": "^5.1.0"
   }
 }

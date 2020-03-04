@@ -20,7 +20,8 @@ export const GlobalProvider = ({ children }) => {
   // ACTION
   async function getTransactions() {
     try {
-      const res = await axios.get(URL_API + '/api/v1/transactions');
+      // const res = await axios.get('/api/v1/transactions');
+      const res = await axios.get(`${URL_API.prod}/transactions`);
 
       dispatch({
         type: 'GET_TRANSACTION',
@@ -37,7 +38,8 @@ export const GlobalProvider = ({ children }) => {
   // DELETE
   async function deleteTransaction(id) {
     try {
-      await axios.delete(URL_API + `/api/v1/transactions/${id}`);
+      // await axios.delete(`/api/v1/transactions/${id}`);
+      await axios.delete(`${URL_API.prod}/transactions/${id}`);
 
       dispatch({
         type: 'DELETE_TRANSACTION',
@@ -60,7 +62,9 @@ export const GlobalProvider = ({ children }) => {
     };
 
     try {
-      const res = await axios.post(URL_API + '/api/v1/transactions', transaction, config);
+      // const res = await axios.post('/api/v1/transactions', transaction, config);
+
+      const res = await axios.post(`${URL_API.prod}/transactions`, transaction, config);
 
       dispatch({
         type: 'ADD_TRANSACTION',

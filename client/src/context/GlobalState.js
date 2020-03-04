@@ -1,6 +1,7 @@
 import React, { createContext, useReducer } from 'react';
 import AppReducer from './AppReducer';
 import axios from 'axios';
+import URL_API from '../config/urlAPI';
 
 // Initial State
 const initialState = {
@@ -19,7 +20,7 @@ export const GlobalProvider = ({ children }) => {
   // ACTION
   async function getTransactions() {
     try {
-      const res = await axios.get('/api/v1/transactions');
+      const res = await axios.get(URL_API + '/api/v1/transactions');
 
       dispatch({
         type: 'GET_TRANSACTION',
@@ -36,7 +37,7 @@ export const GlobalProvider = ({ children }) => {
   // DELETE
   async function deleteTransaction(id) {
     try {
-      await axios.delete(`/api/v1/transactions/${id}`);
+      await axios.delete(URL_API + `/api/v1/transactions/${id}`);
 
       dispatch({
         type: 'DELETE_TRANSACTION',
@@ -59,7 +60,7 @@ export const GlobalProvider = ({ children }) => {
     };
 
     try {
-      const res = await axios.post('/api/v1/transactions', transaction, config);
+      const res = await axios.post(URL_API + '/api/v1/transactions', transaction, config);
 
       dispatch({
         type: 'ADD_TRANSACTION',

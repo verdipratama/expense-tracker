@@ -5,8 +5,11 @@
   "scripts": {
     "start": "node server",
     "server": "nodemon server",
+    "clean-api": "rm -rf node_modules",
+    "clean-client": "cd client && rm -rf node_modules",
     "client": "yarn --cwd ~/Desktop/expense-tracker/client/ start",
-    "dev": "concurrently \"yarn start server\" \"yarn run client\""
+    "dev": "concurrently \"yarn start server\" \"yarn run client\"",
+    "install-client": "cd client && yarn"
   },
   "repository": "git@github.com:verdipratama/expense-tracker.git",
   "author": "verdipratama <verdipratama@icloud.com>",

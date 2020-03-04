@@ -1,4 +1,4 @@
-const API = 'https://api-expense-tracker.herokuapp.com';
+const API = 'api-expense-tracker.herokuapp.com';
 
 const URL_API = {
   prod: `https://${API}/api/v1`,

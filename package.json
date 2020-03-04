@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node server",
     "server": "nodemon server",
-    "client": "yarn start --prefix client",
+    "client": "yarn --cwd ~/Desktop/expense-tracker/client/ start",
     "dev": "concurrently \"yarn start server\" \"yarn run client\""
   },
   "repository": "git@github.com:verdipratama/expense-tracker.git",

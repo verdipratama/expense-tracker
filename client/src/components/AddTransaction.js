@@ -16,7 +16,7 @@ export const AddTransaction = () => {
           console.log(text, amount);
 
           const newTransaction = {
-            id: Math.floor(Math.random() * 10000000),
+            id: Math.floor(Math.random() * 100000000),
             text,
             amount: +amount
           };
